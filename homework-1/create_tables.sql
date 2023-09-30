@@ -24,4 +24,5 @@ CREATE TABLE orders_data
     ship_city varchar(255) NOT NULL
 );
 
+
 SELECT * FROM orders_data

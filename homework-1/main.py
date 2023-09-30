@@ -11,6 +11,7 @@ conn = psycopg2.connect(
 )
 try:
     with conn.cursor() as curs:
+        """Скрипт для заполнения данными таблицу employees_data"""
         with open('north_data\\employees_data.csv') as f:
             reader = csv.DictReader(f)
             for row in reader:
@@ -21,6 +22,7 @@ try:
             conn.commit()
 
         with open('north_data\\customers_data.csv') as f:
+            """Скрипт для заполнения данными таблицу customers_data"""
             reader = csv.DictReader(f)
             for row in reader:
                 # print(row)
@@ -30,6 +32,7 @@ try:
             conn.commit()
 
         with open('north_data\\orders_data.csv') as f:
+            """Скрипт для заполнения данными таблицу orders_data"""
             reader = csv.DictReader(f)
             for row in reader:
                 # print(row)
